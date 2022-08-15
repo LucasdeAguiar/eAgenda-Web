@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "es6",   
+    "moduleResolution": "node",  
+    "strict": true,    
+    "strictPropertyInitialization": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,                       /* Specify what module code is generated. */
+    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
+          /* Ensure that casing is correct in imports. */                                     /* Enable all strict type-checking options. */
+    
+  }
+}
