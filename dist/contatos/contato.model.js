@@ -1,8 +1,11 @@
 import { EntidadeBase } from "../shared/entidade.model.js";
 //extends: Herança -- Implements: Interface
 export class Contato extends EntidadeBase {
-    constructor(nome, email, telefone, empresa, cargo) {
+    constructor(nome, email, telefone, empresa, cargo, id) {
         super();
+        if (id) {
+            this.id = id;
+        }
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;

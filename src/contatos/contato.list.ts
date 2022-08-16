@@ -30,6 +30,33 @@ class ContatoPaginaListagem implements IPaginaHTML, IPaginaListagem{
            novaCelula.innerText = valor;
         })
 
+        const celulaBotoes = novaLinha.insertCell();
+
+        const btnEditar = document.createElement("a");
+        btnEditar.innerText = "Editar";
+        btnEditar.className = "btn btn-primary me-2";
+
+        btnEditar.addEventListener("click", ()=>{
+          const idSelecionado = contato.id;
+
+          window.location.href = `contato.create.html?id=${idSelecionado}`
+        })
+
+        const btnExcluir = document.createElement("a");
+        btnExcluir.innerText = "Excluir";
+        btnExcluir.className = "btn btn-outline-warning me-2";
+
+        btnExcluir.addEventListener("click", ()=>{
+          const idSelecionado = contato.id;
+
+          this.repositorioContatos.excluir(idSelecionado);
+
+          window.location.reload();
+        })
+
+        celulaBotoes.appendChild(btnEditar);
+        celulaBotoes.appendChild(btnExcluir);
+
       })
     }
 
